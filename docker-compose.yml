@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    container_name: easy-run-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - workspace:/workspace
+    environment:
+      - FLASK_ENV=production
+  frontend:
+    build: ./frontend
+    container_name: easy-run-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+volumes:
+  workspace:

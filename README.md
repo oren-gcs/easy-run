@@ -1,0 +1,2 @@
+# 🚀 Easy Run - Deploy Infrastructure Instantly
+Easy Run is a web-based platform to simplify and automate the deployment of cloud infrastructure. It takes a source code repository, automatically discovers Terraform configurations, and applies them to your AWS account.
